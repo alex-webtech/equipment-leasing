@@ -1,0 +1,29 @@
+<html>
+    {% load static %}
+    <head>
+        <title>Container Leasing</title>
+        <link rel="stylesheet" href="{% static 'adminhome.css' %}">
+    </head>
+    <body>
+            <nav>
+                <label class="adminhome">Welcome Admin</label>
+                <ul>
+                    <li>
+                        <a href="/lessorpending">Lessor Pending</a>
+                    </li>
+                    <li>
+                        <a href="/lessorapprove">Lessor Approve</a>
+                    </li>
+                    <li>
+                        <a href="/lesseepending">Lessee Pending</a>
+                    </li>
+                    <li>
+                        <a href="/lesseeapprove">Lessee Approve</a>
+                    </li>
+                    <li>
+                        <a href="/">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+    </body>
+</html>

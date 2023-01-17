@@ -1,0 +1,29 @@
+<html>
+    {%load static%}
+    <head>
+        <title>Container Leasing</title>
+    </head>
+    <body bgcolor="skyblue">
+    <center>
+        <h1><u>Lessor Login</u></h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="lessorlog">
+                <label>Username</label>
+                <input type="text" name="username">
+                <br>
+                <br>
+                <label>Password</label>
+                <input type="password" name="password">
+                <br>
+                <br>
+                <label>New Here?</label>
+                <a href="/lessorreg">Register</a>
+                <br>
+                <br>
+                <input type="submit" value="Login"/>
+            </div>
+        </form>
+    </center>
+    </body>
+</html>

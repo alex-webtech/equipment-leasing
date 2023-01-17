@@ -1,0 +1,63 @@
+<html>
+    {%load static%}
+    <head>
+        <title>Container Leasing</title>
+        <link rel="stylesheet" href="{% static 'adminhome.css' %}">
+    </head>
+    <body>
+            <nav>
+                <label class="adminhome">Welcome Admin</label>
+                <ul>
+                    <li>
+                        <a href="/adminhome">home</a>
+                    </li>
+                    <li>
+                        <a href="/lessorpending">Lessor Pending</a>
+                    </li>
+                    <li>
+                        <a href="/lessorapprove">Lessor Approve</a>
+                    </li>
+                    <li>
+                        <a href="/lesseepending">Lessee Pending</a>
+                    </li>
+                    <li>
+                        <a href="/lesseeapprove">Lessee Approve</a>
+                    </li>
+                    <li>
+                        <a href="/">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>Lessee Approved List</h1>
+            <table border="1">
+                <tr>
+                    <th>Lessee id</th>
+                    <th>Lessor id</th>
+                    <th>Lessee Name</th>
+                    <th>Lessor Name</th>
+                    <th>Container Type</th>
+                    <th>Container Size</th>
+                    <th>Quantity</th>
+                    <th>Lease Date</th>
+                    <th>Total Leasing Months</th>
+                    <th>Lease Amount</th>
+                    <th>Status</th>
+                </tr>
+                {% for data in lesseeapprovedata %}
+                <tr>
+                    <td>{{data.Lessee_id}}</td>
+                    <td>{{data.Owner_id}}</td>
+                    <td>{{data.Lessee_Name}}</td>
+                    <td>{{data.Owner_Name}}</td>
+                    <td>{{data.Lease_Container_Type}}</td>
+                    <td>{{data.Lease_Container_Size}}</td>
+                    <td>{{data.Quantity}}</td>
+                    <td>{{data.Lease_Date}}</td>
+                    <td>{{data.Leasing_Months}}</td>
+                    <td>{{data.Lease_Amount}}</td>
+                    <td>{{data.Status}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+    </body>
+</html>
